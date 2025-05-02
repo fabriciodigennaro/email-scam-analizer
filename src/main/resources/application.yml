@@ -1,0 +1,8 @@
+spring.application.name: email-reader
+
+email:
+  host: imap.gmail.com
+  username: youremail@gmail.com
+  password: your_password
+  protocol: imaps
+  check-interval: 60  # seconds
