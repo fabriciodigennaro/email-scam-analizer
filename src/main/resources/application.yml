@@ -1,8 +1,12 @@
-spring.application.name: email-reader
+spring:
+  application:
+    name: email-reader
+  config:
+    import: "optional:file:.env[.properties]"
 
 email:
-  host: imap.gmail.com
-  username: youremail@gmail.com
-  password: your_password
-  protocol: imaps
-  check-interval: 60  # seconds
+  host:            ${EMAIL_HOST}
+  username:        ${EMAIL_USERNAME}
+  password:        ${EMAIL_PASSWORD}
+  protocol:        ${EMAIL_PROTOCOL}
+  check-interval:  ${EMAIL_CHECK_INTERVAL:60}
